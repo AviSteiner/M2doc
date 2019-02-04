@@ -1,0 +1,12 @@
+This document is going to describe what happens documentation-wise upon calling `installPackage`.
+
+Options:
+    CheckDocumentation -- this is a boolean; default is true.
+    MakeDocumentation -- this is a boolean; default is true.
+    RemakeAllDocumenation -- this is a boolean; default is true. Apparently this is a stopgap measure until we get better dependency graphs between documentation nodes. Also, "false" here will apparently confuse users.
+
+
+*** The first thing that happens is that `loadPackage` is called with (among other things) `LoadDocumentation` set to `true`. The `loadPackage` function is in the `package.m2` file.
+
+Create a list `nodes` of nodes from the raw documentation. [[TODO: Describe what becomes a node.]]
+ 
